@@ -1,14 +1,12 @@
 package com.codeoftheweb.salvo.controller;
 
-import com.codeoftheweb.salvo.service.GameService;
+import com.codeoftheweb.salvo.service.ShipService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class GameController {
+public class ShipController {
 
     @Autowired
-    private GameService gameService;
-
-
+    private ShipService shipService;
 }
