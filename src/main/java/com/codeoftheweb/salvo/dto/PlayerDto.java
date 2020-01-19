@@ -26,4 +26,34 @@ public class PlayerDto {
     public void setEmail(String email) {
         this.email = email;
     }
+
+
+    public static final class Builder {
+        private long id;
+        private String email;
+
+        private Builder() {
+        }
+
+        public static Builder aPlayerDto() {
+            return new Builder();
+        }
+
+        public Builder withId(long id) {
+            this.id = id;
+            return this;
+        }
+
+        public Builder withEmail(String email) {
+            this.email = email;
+            return this;
+        }
+
+        public PlayerDto build() {
+            PlayerDto playerDto = new PlayerDto();
+            playerDto.setId(id);
+            playerDto.setEmail(email);
+            return playerDto;
+        }
+    }
 }
